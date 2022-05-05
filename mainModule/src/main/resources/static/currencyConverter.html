@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+    <script src="/webjars/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/currencyConverter.js"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
+</head>
+<body>
+    <div>
+        <div>
+            <label for="name">Currency name</label>
+            <input id="name" type="text" name="name"/>
+        </div>
+        <div>
+            <label for="qtty">Currency quantity</label>
+            <input id="qtty" type="text" name="qtty"/>
+        </div>
+
+        <div>
+            <button id="convert">Convert currency</button>
+        </div>
+
+        <div>
+            <span id="result">
+                Currency was not converted yet
+            </span>
+        </div>
+    </div>
+</body>
+</html>
