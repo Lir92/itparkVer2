@@ -13,7 +13,8 @@ import java.util.stream.StreamSupport;
 
 @Service
 @RequiredArgsConstructor
-@ConditionalOnProperty(value = "application.nosql.type", havingValue = "redis")
+@ConditionalOnProperty(value = "application.nosql.type", havingValue = "redis") // здесь указывается, что в application.yaml
+// файле должен быть указан тип redis
 public class PersonServiceImpl implements PersonService {
 
     private final PersonRepository personRepository;

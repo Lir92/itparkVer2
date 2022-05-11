@@ -22,7 +22,7 @@
         <module>mainModule</module>
         <module>additionalModule</module>
         <module>nosql</module>
-<!--        <module>reactive</module>-->
+        <module>reactive</module>
 <!--        <module>batch</module>-->
 <!--            <module>spring-data-rest</module>-->
 <!--        <module>cloud</module>-->

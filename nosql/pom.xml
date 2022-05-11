@@ -16,8 +16,8 @@
         <spring-data-keyvalue.version>2.6.3</spring-data-keyvalue.version>
         <mapstruct.defaulComponentModel>spring</mapstruct.defaulComponentModel>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
-        <relmongo.version>3.4.0</relmongo.version>
-        <mongock.version>4.1.17</mongock.version>
+        <relmongo.version>3.4.2</relmongo.version>
+        <mongock.version>4.3.8</mongock.version>
     </properties>
 
     <parent>

@@ -23,7 +23,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) {
-        web.ignoring() // в данном данном методе указываются пути, где указываются пути, которые необходимо игнорировать
+        web.ignoring() // в данном данном методе указываются пути, которые необходимо игнорировать
                 // при запуске аутентификации. К ресурсным файлам доступ не скрывается.
                 .antMatchers("/css/**", "/webjars/**", "/images/**");
     }

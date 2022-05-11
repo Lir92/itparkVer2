@@ -10,7 +10,7 @@ import javax.validation.constraints.NotEmpty;
 
 @Data
 @NoArgsConstructor
-@Document(collection = "book")
+@Document(collection = "book") // аннотация для БД mongo с указанием имени таблицы
 public class Book {
 
     @Id
@@ -22,7 +22,7 @@ public class Book {
     @NotEmpty
     private String name;
 
-    @OneToOne
+    @OneToOne // для этого необходима зависимость в pom.xml relmongo
     private Genre genre;
 
 }

@@ -11,7 +11,7 @@ import javax.validation.constraints.NotEmpty;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "genre")
+@Document(collection = "genre") // аннотация для БД mongo
 public class Genre {
 
     @Id

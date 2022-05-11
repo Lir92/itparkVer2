@@ -11,7 +11,7 @@ spring:
       database: library
 application:
   nosql:
-    type: mongo
+    type: mongo #здесь указывается тип БД, который будет использоваться redis или mongo
 
 mongock:
   runner-type: "ApplicationRunner" # default
