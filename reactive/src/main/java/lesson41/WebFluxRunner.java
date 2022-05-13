@@ -1,7 +1,7 @@
 package lesson41;
 
 import lesson41.model.Genre;
-import lesson41.repostiory.GenreRepository;
+import lesson41.repository.GenreRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

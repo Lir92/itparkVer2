@@ -1,4 +1,4 @@
-package lesson41.repostiory;
+package lesson41.repository;
 
 import lesson41.model.Genre;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;

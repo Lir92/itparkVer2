@@ -2,7 +2,7 @@ package lesson41.controller;
 
 import lesson41.dto.GenreDto;
 import lesson41.mapper.GenreMapper;
-import lesson41.repostiory.GenreRepository;
+import lesson41.repository.GenreRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
