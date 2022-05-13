@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add/Edit/View city</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="css/style.css">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.0/css/bootstrap.min.css}" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css"/>
+</head>
+<body>
+<form id="add-form" th:action="@{/city/save}" th:if="${city == null}" method="post" action="city.html">
+
+    <p><strong>Add new city:</strong></p>
+    <div class="row">
+        <label for="id-input">ID:</label>
+        <input id="id-input" name="id" type="text" required="required" maxlength="6"/>
+    </div>
+
+    <div class="row">
+        <label for="ruName-input">Russian name:</label>
+        <input id="ruName-input" name="ruName" type="text" required="required" maxlength="120" />
+    </div>
+
+    <div class="row">
+        <label for="enName-input">English name:</label>
+        <input id="enName-input" name="enName" type="text" required="required" maxlength="120" />
+    </div>
+
+    <div class="row">
+        <label for="code-input">City code:</label>
+        <input id="code-input" name="code" type="number" required="required" maxlength="3" />
+    </div>
+
+    <div class="row">
+        <label for="population-input">City code:</label>
+        <input id="population-input" name="population" type="number" required="required" maxlength="10" />
+    </div>
+
+    <div class="row">
+        <a th:href="@{/cities}" href="cities.html"><img title="Back" th:src="@{/images/back.png}"/></a>
+        <button type="submit"><img title="Save" th:src="@{/images/save.png}"/></button>
+    </div>
+</form>
+
+<form id="edit-form" th:action="@{/city/save(id=${city.id})}" th:unless="${city == null}" method="post"
+      action="city.html" th:object="${city}">
+
+    <p><strong>City Info:</strong></p>
+    <div class="row">
+        <label for="id-input">ID:</label>
+        <input id="id-input" type="text" th:value="*{id}" readonly="readonly" value="1"/>
+    </div>
+
+    <div class="row">
+        <label for="ruName-input">Name:</label>
+        <input id="ruName-input" name="ruName" type="text" th:value="*{ruName}" required="required" maxlength="120" value="Russian Name"/>
+    </div>
+
+    <div class="row">
+        <label for="enName-input">English name:</label>
+        <input id="enName-input" name="enName" type="text" th:value="*{enName}" required="required" maxlength="120" value="English Name"/>
+    </div>
+
+    <div class="row">
+        <label for="code-input">City code:</label>
+        <input id="code-input" name="code" type="number" th:value="*{code}" required="required" maxlength="3" value="City code"/>
+    </div>
+
+    <div class="row">
+        <label for="population-input">City code:</label>
+        <input id="population-input" name="population" type="number" th:value="*{population}" required="required" maxlength="10" value="Population"/>
+    </div>
+
+    <div class="row">
+        <a th:href="@{/cities}" href="cities.html"><img title="Back" th:src="@{/images/back.png}"/></a>
+        <button type="submit"><img title="Save" th:src="@{/images/save.png}"/></button>
+    </div>
+</form>
+</body>
+</html>
